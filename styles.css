@@ -19,24 +19,30 @@ html {
     animation: fadeIn 1s ease-out;
 }
 
-/* Custom Styles */
-.nav-link {
-    position: relative;
-}
-
-.nav-link::after {
+/* Modern Navbar Styles */
+.nav-link::before {
     content: '';
     position: absolute;
+    bottom: -2px;
+    left: 50%;
     width: 0;
     height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #ef4444;
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::before {
     width: 100%;
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-1px);
 }
 
 /* Form Input Focus Styles */
@@ -44,6 +50,34 @@ input:focus, textarea:focus {
     outline: none;
     border-color: #ef4444;
     box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Glass morphism effect for navbar */
+nav {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile menu animation */
+#mobileMenu {
+    transition: all 0.3s ease;
+}
+
+#mobileMenu.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#mobileMenu:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover animations for mobile menu */
+@media (max-width: 768px) {
+    .nav-link:hover {
+        transform: translateX(5px);
+    }
 }
 
 /* Mobile Menu Button */
