@@ -20,22 +20,6 @@ html {
 }
 
 /* Modern Navbar Styles */
-.nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #ef4444, #dc2626);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::before {
-    width: 100%;
-}
-
 .nav-link {
     position: relative;
     transition: all 0.3s ease;
@@ -104,4 +88,83 @@ nav {
         background-color: black;
         padding: 1rem;
     }
+}
+
+/* Global Styles */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Link Effects */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Mobile Menu Animations */
+.mobile-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open .mobile-menu-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-menu.open .mobile-menu-item:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu.open .mobile-menu-item:nth-child(2) { transition-delay: 0.15s; }
+.mobile-menu.open .mobile-menu-item:nth-child(3) { transition-delay: 0.2s; }
+.mobile-menu.open .mobile-menu-item:nth-child(4) { transition-delay: 0.25s; }
+.mobile-menu.open .mobile-menu-item:nth-child(5) { transition-delay: 0.3s; }
+.mobile-menu.open .mobile-menu-item:nth-child(6) { transition-delay: 0.35s; }
+
+/* Mobile Menu Item Hover Effects */
+.mobile-menu-item:hover {
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+    transform: translateX(5px);
+    border-left-color: #ef4444;
+}
+
+/* Hamburger Menu Animation */
+.hamburger-line {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 } 

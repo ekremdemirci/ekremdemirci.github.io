@@ -40,24 +40,26 @@
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobileMenuBtn" class="text-white focus:outline-none hover:bg-white/10 p-2 rounded-lg transition-all duration-300">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                        <div class="w-6 h-6 flex flex-col justify-between">
+                            <span class="hamburger-line w-full h-0.5 bg-white rounded-full"></span>
+                            <span class="hamburger-line w-full h-0.5 bg-white rounded-full"></span>
+                            <span class="hamburger-line w-full h-0.5 bg-white rounded-full"></span>
+                        </div>
                     </button>
                 </div>
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="md:hidden mt-4 pb-4 hidden">
+            <div id="mobileMenu" class="mobile-menu md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="#anasayfa" class="px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Ana Sayfa</a>
-                    <a href="#hizmetler" class="px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Hizmetler</a>
-                    <a href="#yorumlar" class="px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Yorumlar</a>
-                    <a href="#hakkimizda" class="px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Hakkımızda</a>
-                    <a href="https://www.instagram.com/gokaymotorr/" target="_blank" class="px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">
+                    <a href="#anasayfa" class="mobile-menu-item px-4 py-3 rounded-lg transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Ana Sayfa</a>
+                    <a href="#hizmetler" class="mobile-menu-item px-4 py-3 rounded-lg transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Hizmetler</a>
+                    <a href="#yorumlar" class="mobile-menu-item px-4 py-3 rounded-lg transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Yorumlar</a>
+                    <a href="#hakkimizda" class="mobile-menu-item px-4 py-3 rounded-lg transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Hakkımızda</a>
+                    <a href="https://www.instagram.com/gokaymotorr/" target="_blank" class="mobile-menu-item px-4 py-3 rounded-lg transition-all duration-300 border-l-4 border-transparent hover:border-red-500">
                         <i class="fab fa-instagram mr-2"></i>Instagram
                     </a>
-                    <a href="#iletisim" class="px-4 py-3 rounded-lg bg-red-600 hover:bg-red-700 transition-all duration-300 text-center">
+                    <a href="#iletisim" class="mobile-menu-item px-4 py-3 rounded-lg bg-red-600 hover:bg-red-700 transition-all duration-300 text-center">
                         <i class="fas fa-phone mr-2"></i>İletişim
                     </a>
                 </div>
@@ -302,7 +304,7 @@
                         Hakkımızda
                     </h2>
                     <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Motorsiklet dünyasında güvenilir bir isim olan Gökay Motor'un hikayesi
+                        Gökay Motor, motorsiklet dünyasında 16 yıllık sektör tecrübesi ile satış, servis ve yedek parça hizmeti sunuyor.
                     </p>
                 </div>
                 
