@@ -1,7 +1,132 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoServis - Profesyonel Motorsiklet Servisi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-black text-white fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">MotoServis</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#anasayfa" class="hover:text-red-500 transition">Ana Sayfa</a>
+                    <a href="#hizmetler" class="hover:text-red-500 transition">Hizmetler</a>
+                    <a href="#hakkimizda" class="hover:text-red-500 transition">Hakkımızda</a>
+                    <a href="#iletisim" class="hover:text-red-500 transition">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="h-full bg-black bg-opacity-50 flex items-center">
+            <div class="container mx-auto px-4 text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Profesyonel Motorsiklet Servisi</h1>
+                <p class="text-xl mb-8">Güvenilir ve uzman ekibimizle motorsikletinize en iyi bakımı sağlıyoruz</p>
+                <a href="#iletisim" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition">Randevu Al</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler Section -->
+    <section id="hizmetler" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Hizmetlerimiz</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i class="fas fa-tools text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Periyodik Bakım</h3>
+                    <p>Düzenli bakım ve kontroller ile motorsikletinizin performansını koruyun.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i class="fas fa-cogs text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Mekanik Tamir</h3>
+                    <p>Uzman ekibimizle tüm mekanik sorunlarınıza çözüm sunuyoruz.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i class="fas fa-paint-brush text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Kaporta & Boya</h3>
+                    <p>Profesyonel kaporta ve boya hizmetleri ile motorsikletinizi yenileyin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Section -->
+    <section id="hakkimizda" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">Hakkımızda</h2>
+                <p class="text-lg mb-6">
+                    20 yılı aşkın tecrübemizle motorsiklet tutkunlarına en iyi hizmeti sunuyoruz. 
+                    Uzman ekibimiz ve modern ekipmanlarımızla motorsikletinize en iyi bakımı sağlıyoruz.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-600">20+</div>
+                        <div class="text-gray-600">Yıllık Tecrübe</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-600">1000+</div>
+                        <div class="text-gray-600">Mutlu Müşteri</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-600">50+</div>
+                        <div class="text-gray-600">Marka</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-600">24/7</div>
+                        <div class="text-gray-600">Destek</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="iletisim" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">İletişim</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Bize Ulaşın</h3>
+                    <div class="space-y-4">
+                        <p><i class="fas fa-map-marker-alt text-red-600 mr-2"></i> Örnek Mahallesi, Örnek Sokak No:123</p>
+                        <p><i class="fas fa-phone text-red-600 mr-2"></i> +90 555 123 4567</p>
+                        <p><i class="fas fa-envelope text-red-600 mr-2"></i> info@motoservis.com</p>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold mb-4">Çalışma Saatleri</h4>
+                        <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                        <p>Pazar: Kapalı</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Randevu Formu</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Adınız" class="w-full p-2 rounded border">
+                        <input type="email" placeholder="E-posta" class="w-full p-2 rounded border">
+                        <input type="tel" placeholder="Telefon" class="w-full p-2 rounded border">
+                        <textarea placeholder="Mesajınız" class="w-full p-2 rounded border h-32"></textarea>
+                        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 MotoServis. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>
